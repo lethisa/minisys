@@ -18,7 +18,7 @@
 FROM postgres:15.2
 
 # File Author / Maintainer
-MAINTAINER Anurag Yadav
+LABEL MAINTAINER="Anurag Yadav"
 
 # Install utility tools
 RUN apt-get update && \

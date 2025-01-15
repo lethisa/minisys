@@ -18,7 +18,7 @@
 FROM cassandra:4.1
 
 # File Author / Maintainer
-MAINTAINER Anurag Yadav
+LABEL MAINTAINER="Anurag Yadav"
 
 # Install utility tools
 RUN apt-get update && \

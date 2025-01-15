@@ -18,7 +18,7 @@
 FROM ubuntu:22.04
 
 # File Author / Maintainer
-MAINTAINER Anurag Yadav
+LABEL MAINTAINER="Anurag Yadav"
 
 ARG DEBIAN_FRONTEND=noninteractive
 

@@ -18,7 +18,7 @@
 FROM fluentd:v1.14-1
 
 # File Author / Maintainer
-MAINTAINER Anurag Yadav
+LABEL MAINTAINER="Anurag Yadav"
 
 USER root
 
