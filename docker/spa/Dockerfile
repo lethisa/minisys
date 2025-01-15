@@ -22,7 +22,8 @@ MAINTAINER Anurag Yadav
 
 # Install utility tools
 RUN apt-get update
-RUN apt-get install -y net-tools && \
+RUN apt-get install -y apt-utils && \
+    apt-get install -y net-tools && \
     apt-get install -y iputils-ping && \
     apt-get install -y curl
 RUN apt-get clean

@@ -21,11 +21,9 @@ FROM postgres:15.2
 MAINTAINER Anurag Yadav
 
 # Install utility tools
-RUN apt-get update
-RUN apt-get install -y net-tools && \
-    apt-get install -y iputils-ping && \
-    apt-get install -y dnsutils && \
-    apt-get install -y curl
+RUN apt-get update && \
+    apt-get install -y apt-utils && \
+    apt-get install -y net-tools iputils-ping dnsutils curl
 
 COPY ./image/create-schema.sql /docker-entrypoint-initdb.d/
 COPY ./image/check-readiness.sh /check-readiness.sh
