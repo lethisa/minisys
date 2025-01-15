@@ -2,7 +2,7 @@
 
 if [ -z "$1" ]; then
     echo "**** ERROR: Missing service id argument ****"
-    exit -1
+    exit 1
 else
     if [ "$1" == "bash" ]; then
 	exec "/bin/bash"

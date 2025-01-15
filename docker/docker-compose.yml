@@ -14,8 +14,6 @@
 # limitations under the License.                                           #
 ############################################################################
 
-version: '3.5'
-
 networks:
   mynet1:
     name: mynet1
@@ -339,7 +337,7 @@ services:
       - "8000:8000"
     env_file: .env
     volumes:
-      - app-logs:/var/log/oms
+      - app-logs:/var/log/oms      sudo lsof -i :5432
     #command: python3 manage.py runserver 0.0.0.0:8000
     logging:
       driver: "fluentd"
@@ -350,12 +348,12 @@ services:
       - "fluentd"
 
 
-  services:
-    build:
-      context: ./services
-      dockerfile: Dockerfile
-    image: ntw/services
-    container_name: services-build
+  # services:
+  #   build:
+  #     context: ./services
+  #     dockerfile: Dockerfile
+  #   image: ntw/services
+  #   container_name: services-build
 
 
   gateway-svc:
