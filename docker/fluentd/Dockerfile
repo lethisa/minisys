@@ -22,6 +22,12 @@ MAINTAINER Anurag Yadav
 
 USER root
 
+# Install compatible version of faraday
+RUN ["gem", "install", "faraday", "--no-document", "--version", "2.8.1"]
+
+# Install compatible version of faraday-net_http
+RUN ["gem", "install", "faraday-net_http", "--no-document", "--version", "2.0.1"]
+
 # Workaround to fix elasticsearch bug in elasticsearch version 8
 RUN ["gem", "install", "elasticsearch", "--no-document", "--version", "< 8"]
 
